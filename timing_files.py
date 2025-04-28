@@ -193,6 +193,6 @@ while True:
       print("Timing files created! 🥳")
 # After processing current batch
 continue_processing = input("\nWould you like to process more participants? (yes/no): ").lower()
- if continue_processing not in ['yes', 'y']:
+if continue_processing not in ['yes', 'y']:
   print("\n All processing complete! Have a great day! 🎉")
   break
