@@ -171,8 +171,10 @@ while True:
 
         df = pd.read_excel(file_name)
         required_columns = {'Material_Type', 'Signal_Detection_Type', 'Duration'}
-        if phase == "Study": required_columns.add('stimulus_start_time')
-        else: required_columns.add('Onset_Time'
+        if phase == "Study": 
+          required_columns.add('stimulus_start_time')
+        else: 
+          required_columns.add('Onset_Time'
         if not required_columns.issubset(df.columns): 
           continue
 
