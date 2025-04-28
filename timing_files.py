@@ -16,7 +16,7 @@ def find_behavioral_files(beh_directory):
   study_files = sorted(glob.glob(os.path.join(beh_directory, "*_ObjectScenePairTask_local_study2_*.csv")))
   study_file = next((file for file in study_files if not any(suffix in file for suffix in ["studyblock", "studytrial", "runs"])), None)
 
-  return recog_file, study_file if recog_file and study_file else (None, None)
+  return (recog_file, study_file) if (recog_file and study_file) else (None, None)
 
 def extract_material_type(row):
   if "object" in str(row).lower(): return "Object"
