@@ -174,7 +174,7 @@ while True:
         if phase == "Study": 
           required_columns.add('stimulus_start_time')
         else: 
-          required_columns.add('Onset_Time'
+          required_columns.add('Onset_Time')
         if not required_columns.issubset(df.columns): 
           continue
 
