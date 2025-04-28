@@ -166,13 +166,15 @@ while True:
     for run in runs:
       for phase in phases:
         file_name = os.path.join(output_folder, f"Run{run}_{phase}.xlsx")
-        if not os.path.exists(file_name): continue
+        if not os.path.exists(file_name):
+          continue
 
         df = pd.read_excel(file_name)
         required_columns = {'Material_Type', 'Signal_Detection_Type', 'Duration'}
         if phase == "Study": required_columns.add('stimulus_start_time')
         else: required_columns.add('Onset_Time'
-        if not required_columns.issubset(df.columns): continue
+        if not required_columns.issubset(df.columns): 
+          continue
 
         for material, short_name in material_types.items():
           material_df = df[df['Material_Type'] == material]
